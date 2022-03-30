@@ -23,7 +23,7 @@ export const toggleFlightMode = async (
     await got.post(AUTOMATE_SERVER_URL, {
       json: AutomatePayloadSchema.parse(payload)
     })
-  } catch (err) {
+  } catch (err:any) {
     console.error(err.message)
   }
   // Give the device time to reconnect.
